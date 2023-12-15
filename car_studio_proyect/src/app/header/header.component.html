@@ -1,0 +1,32 @@
+<header>
+    <nav>
+        <img src="/src/img/logo.jpg">
+      <ul>
+        <li><a href="#">Inicio</a></li>
+          
+        <li>
+          <a href="#">Productos</a>
+          <ul>
+            <li><a href="#">Automóviles</a></li>
+            <li><a href="#">Motos</a></li>
+            <li><a href="#">Camiones</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Servicios</a>
+          <ul>
+            <li><a href="#">Mantenimiento</a></li>
+            <li><a href="#">Reparaciones</a></li>
+            <li><a href="#">Accesorios</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+   
+  </header>
+  <button mat-button [matMenuTriggerFor]="aboveMenu">Above</button>
+  <mat-menu #aboveMenu="matMenu" yPosition="below">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+  </mat-menu>
