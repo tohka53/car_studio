@@ -1,18 +1,35 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatButtonModule} from '@angular/material/button';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
-
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [MatButtonModule, MatMenuModule],
+  imports: [CommonModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  
 })
 export class HeaderComponent {
+  isBurgerOpen = false;
+  isMenuOpen = false;
+  session =0;
+  theme:any = 'ligth';
+  bar=0;
+
+  toggleMenu()
+  {
+      this.isBurgerOpen = !this.isBurgerOpen;
+      this.isMenuOpen =!this.isMenuOpen;  
+
+    
+  }
+  changeTheme ()
+  {
+
+
+  }
+  logout ()
+  {
+    this.session = 0;
+  }
 
 }
-

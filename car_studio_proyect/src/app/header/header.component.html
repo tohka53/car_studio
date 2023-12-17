@@ -1,32 +1,71 @@
 <header>
+    <a href="">
+      <div class="logo">
+      </div>
+    </a>
     <nav>
-        <img src="/src/img/logo.jpg">
       <ul>
-        <li><a href="#">Inicio</a></li>
-          
         <li>
-          <a href="#">Productos</a>
-          <ul>
-            <li><a href="#">Automóviles</a></li>
-            <li><a href="#">Motos</a></li>
-            <li><a href="#">Camiones</a></li>
-          </ul>
+          <a routerLink="/galeria">Proyectos</a>
         </li>
+        <li class="sep">|</li>
+        <li *ngIf="session">
+          <a routerLink="/catalog">Catálogo</a>
+        </li>
+        <li *ngIf="session" class="sep">|</li>
+        <li *ngIf="session">
+          <select>
+            <option value="" disabled selected>Razas</option>
+            <option value="beagle">Material</option>
+            <option value="cocker">Carros</option>
+            <option value="shiba">Equipo</option>
+            <option value="other">Herramientas</option>
+            <option value="cat">Fotos</option>
+          </select>
+        </li>
+        <li *ngIf="session" class="sep">|</li>
+        <li *ngIf="!session">
+          <a routerLink="/register">Registrarse</a>
+        </li>
+        <li *ngIf="!session" class="sep">|</li>
         <li>
-          <a href="#">Servicios</a>
-          <ul>
-            <li><a href="#">Mantenimiento</a></li>
-            <li><a href="#">Reparaciones</a></li>
-            <li><a href="#">Accesorios</a></li>
-          </ul>
+          <a routerLink="/contact">Contáctanos</a>
         </li>
-        <li><a href="#">Contacto</a></li>
       </ul>
     </nav>
-   
+    <div (click)="changeTheme()" class="theme"></div>
+    <button *ngIf="!session" type="submit" routerLink="/login">LOGIN</button>
+    <button *ngIf="session" class="logout" type="submit" (click)="logout()">Cerrar Sesión</button>
+  
+    <div (click)="toggleMenu()" [ngClass]="{ 'abierto': isBurgerOpen}" class="burger">
+      <div class="barra superior"></div>
+      <div class="barra media"></div>
+      <div class="barra inferior"></div>
+    </div>
   </header>
-  <button mat-button [matMenuTriggerFor]="aboveMenu">Above</button>
-  <mat-menu #aboveMenu="matMenu" yPosition="below">
-  <button mat-menu-item>Item 1</button>
-  <button mat-menu-item>Item 2</button>
-  </mat-menu>
+  
+  <menu [ngClass]="{ 'abierto': isMenuOpen }">
+    <nav>
+      <button *ngIf="!session" type="submit" routerLink="/login" (click)="toggleMenu()">LOGIN</button>
+      <button *ngIf="session" class="logout" type="submit">Cerrar Sesión</button>
+      <hr>
+      <a class="nav-link" routerLink="/galeria" (click)="toggleMenu()">Galeria</a>
+      <hr>
+      <a class="nav-link" *ngIf="session" routerLink="/catalog" (click)="toggleMenu()">Catalogo</a>
+      <hr *ngIf="session">
+      <select *ngIf="session">
+        <option value="" disabled selected>Razas</option>
+        <option value="beagle">Beagle</option>
+        <option value="cocker">Cocker Spaniel</option>
+        <option value="shiba">Shiba Inu</option>
+        <option value="other">Other</option>
+        <option value="cat">Cats</option>
+      </select>
+      <hr *ngIf="session">
+      <a *ngIf="!session" class="nav-link" routerLink="/register" (click)="toggleMenu()">Registrarse</a>
+      <hr *ngIf="!session">
+      <a class="nav-link" routerLink="/contact" (click)="toggleMenu()">Contáctanos</a>
+      <hr>
+    </nav>
+  </menu>
+  
