@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from "./header/header.component";
-
+import { HeaderComponent } from "./component/header/header.component";
+import { LoginComponent } from "./component/login/login.component";
+import 'flowbite';
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
-    styleUrl: './app.component.scss',
-    imports: [CommonModule, RouterOutlet, HeaderComponent,CommonModule]
+    imports: [CommonModule, RouterOutlet, HeaderComponent, LoginComponent]
 })
 export class AppComponent {
-  title = 'car_studio_e';
+  title = 'cse-comerce';
 }
