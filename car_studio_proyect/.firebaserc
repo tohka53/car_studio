@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "cscommerse": {
+      "hosting": {
+        "cse-comerce": [
+          "cscommerse"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "cscommerse"
+  }
+}

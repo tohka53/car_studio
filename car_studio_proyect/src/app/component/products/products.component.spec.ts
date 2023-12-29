@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProductsComponent } from './products.component';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 describe('ProductsComponent', () => {
   let component: ProductsComponent;
