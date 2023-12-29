@@ -5,8 +5,7 @@ import { HeaderComponent } from "./component/header/header.component";
 import { LoginComponent } from "./component/login/login.component";
 import 'flowbite';
 import { ProductsComponent } from "./component/products/products.component";
-import firebase from 'firebase/app';
-import 'firebase/firestore';
+
 @Component({
     selector: 'app-root',
     standalone: true,

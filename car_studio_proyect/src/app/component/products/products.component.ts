@@ -2,8 +2,7 @@ import { Component, NgModule, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { ProductosService } from '../../services/productos.service';
 import { ReactiveFormsModule } from '@angular/forms';
-import firebase from 'firebase/app';
-import 'firebase/firestore';
+
 
 @Component({
   selector: 'app-products',
