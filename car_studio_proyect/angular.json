@@ -88,23 +88,6 @@
             ],
             "scripts": []
           }
-        },
-        "deploy": {
-          "builder": "@angular/fire:deploy",
-          "options": {
-            "version": 2
-          },
-          "configurations": {
-            "production": {
-              "buildTarget": "cse-comerce:build:production",
-              "serveTarget": "cse-comerce:serve:production"
-            },
-            "development": {
-              "buildTarget": "cse-comerce:build:development",
-              "serveTarget": "cse-comerce:serve:development"
-            }
-          },
-          "defaultConfiguration": "production"
         }
       }
     }
