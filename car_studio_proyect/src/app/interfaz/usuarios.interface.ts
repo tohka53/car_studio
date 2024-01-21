@@ -9,3 +9,5 @@ export default interface usuario
     telefono?: string;
     direccion?: string;
 }
+
+// Path: src/app/interfaz/usuarios.interface.ts
