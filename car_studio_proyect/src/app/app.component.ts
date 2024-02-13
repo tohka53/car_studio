@@ -5,11 +5,12 @@ import { HeaderComponent } from "./component/header/header.component";
 import { LoginComponent } from "./component/login/login.component";
 import 'flowbite';
 import { FooterComponent } from "./component/footer/footer.component";
+import { Error404Component } from "./component/error404/error404.component";
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
-    imports: [CommonModule, RouterOutlet, HeaderComponent, LoginComponent, FooterComponent]
+    imports: [CommonModule, RouterOutlet, HeaderComponent, LoginComponent, FooterComponent, Error404Component]
 })
 export class AppComponent {
   title = 'cse-comerce';
