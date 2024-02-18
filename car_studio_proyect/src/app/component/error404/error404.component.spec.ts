@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Error404Component } from './error404.component';
+import { RouterModule,Routes }     from '@angular/router';  
+import { ActivatedRoute, Params }   from '@angular/router';
 
 describe('Error404Component', () => {
   let component: Error404Component;
